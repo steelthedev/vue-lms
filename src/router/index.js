@@ -6,7 +6,13 @@ import Courses from '../views/Courses.vue'
 import Course from '../views/Course.vue'
 import Myaccount from '../views/dashboard/Myaccount.vue'
 import Addcourse from '../views/dashboard/Addcourse.vue'
+import ManageCourse from '../views/dashboard/ManageCourse.vue'
+import EditProfile from '../views/dashboard/EditProfile.vue'
+import Billing from '../views/dashboard/Billing.vue'
 import Notfound from '../views/404.vue'
+import Search from '../views/Search.vue'
+import Cart from '../views/Cart.vue'
+import Checkout from '../views/Checkout.vue'
 
 const routes = [
   {
@@ -26,6 +32,27 @@ const routes = [
     component:Signup
   },
 
+  {
+    path: '/cart',
+    name: 'Cart',
+    component:Cart
+  },
+
+  {
+    path: '/checkout',
+    name: 'Checkout',
+    component:Checkout
+  },
+
+
+
+
+  {
+    path: '/search',
+    name: 'Search',
+    component:Search
+  },
+
     {
     path: '/courses',
     name: 'Courses',
@@ -39,9 +66,33 @@ const routes = [
   },
 
   {
+    path: '/billing',
+    name: 'Billing',
+    component:Billing
+  },
+
+  {
     path: '/myaccount',
     name: 'Myaccount',
     component:Myaccount
+  },
+
+  {
+    path: '/manage-course',
+    name: 'ManageCourse',
+    component:ManageCourse
+  },
+
+  {
+    path: '/edit-profile',
+    name: 'EditProfile',
+    component:EditProfile
+  },
+
+  {
+    path: '/instructor/addcourse',
+    name: 'Addcourse',
+    component:Addcourse
   },
 
   

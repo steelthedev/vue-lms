@@ -1,35 +1,45 @@
 <template>
 
-                            <div
-                            
-                             class="col-md-4 col-lg-4 mt-2">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="card-img">
-                                            <figure class="">
-                                                <img :src="course.get_image"  alt="course-img">
-                                            </figure>
-                                        </div>
-                                        <div class="card-words m-1 ">
-                                            <h3>
-                                                {{course.title}}
-                                            </h3>
-                                            <p class="mt-3" v-html="course.short_description">
-                                            </p>
-                                        </div>
-                                        <div class="card-links">
-                                            <router-link :to="{name:'Course', params:{slug:course.slug}}" class=" btn btn-outline-white v-btn mt-3" type="button">View Course</router-link>
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
 
 
+				<!-- Card item START -->
+				<div class="col-sm-6 col-xl-4">
+					<div class="card shadow h-100">
+						<!-- Image -->
+						<img :src="course.get_image" class="card-img-top" alt="course image">
+						<!-- Card body -->
+						<div class="card-body pb-0">
+							<!-- Badge and favorite -->
+							<div class="d-flex justify-content-between mb-2">
+								<a href="#" class="badge bg-purple bg-opacity-10 text-purple">All level</a>
+								<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
+							</div>
+							<!-- Title -->
+							<h5 class="card-title"><router-link :to="{name:'Course', params: {slug : course.slug}}">{{course.title}}</router-link></h5>
+							<p class="mb-2 text-truncate-2" v-html="course.short_description"></p>
+							<!-- Rating star -->
+							<ul class="list-inline mb-0">
+								<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+								<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+								<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+								<li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+								<li class="list-inline-item me-0 small"><i class="far fa-star text-warning"></i></li>
+								<li class="list-inline-item ms-2 h6 fw-light mb-0">4.0/5.0</li>
+							</ul>
+						</div>
+						<!-- Card footer -->
+						<div class="card-footer pt-0 pb-3">
+							<hr>
+							<div class="d-flex justify-content-between">
+								<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>12h 56m</span>
+								<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>15 lectures</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Card item END -->
 
-
-                  
-</template>
+				</template>
 
 
 <script>
@@ -40,37 +50,4 @@ export default {
     }
 }
 </script>
-<style scoped>
 
-.card-img img{
-    width: 100%;
-}
-.card{
-    padding: 30px 0;
-    height: 100%;
-    margin: 0 auto ;
-}
-
-.card-body{
-    padding: 20px;
-    
-}
-.card-btn {
-    padding: 20px;
-    border-radius:2px; 
-    border: none;
-    background: var(--main-color);
-    color: #fff;
-    font-size: 1rem;
-}
-
-.v-btn {
-    padding: 20px;
-    border-radius:2px; 
-    border: none;
-    background: var(--main-color);
-    color: #fff;
-    font-size: 1rem;
-}
-
-</style>

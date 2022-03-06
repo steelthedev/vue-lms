@@ -1,40 +1,29 @@
+
 <template>
-<div class="row justify-content-center">
-    <div class="col-md-12 col-sm-12">
-        <div class="card shadow-lg border-0 rounded-lg mt-5 mx-auto" style="width: 30rem;">
-            <h3 class="card-header display-1 text-muted text-center">
-                404
-            </h3>
-
-            <span class="card-subtitle mb-2 text-muted text-center">
-                Page Could Not Be Found 
-            </span>
-
-            <div class="card-body mx-auto">
-                <router-link to="/" class="btn btn-sm btn-info text-white"> Back To Home </router-link>
-            </div>
-        </div>
-    </div>
-</div>
+   <!-- **************** MAIN CONTENT START **************** -->
+<main>
+<section class="pt-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<!-- Image -->
+				<img src="../assets/images/element/error404-01.svg" class="h-200px h-md-400px mb-4" alt="">
+				<!-- Title -->
+				<h1 class="display-1 text-danger mb-0">404</h1>
+				<!-- Subtitle -->
+				<h2>Oh no, something went wrong!</h2>
+				<!-- info -->
+				<p class="mb-4">Either something went wrong or this page doesn't exist anymore.</p>
+				<!-- Button -->
+				<a href="index.html" class="btn btn-primary mb-0">Take me to Homepage</a>
+			</div>
+		</div>
+	</div>
+</section>
+</main>
 </template>
 
 
-
 <style scoped>
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  border-radius: .25rem;
-}
 
-.card .card-header {
-  background-color: #fff;
-  border-bottom: none;
-}
 </style>
