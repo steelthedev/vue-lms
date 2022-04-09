@@ -99,7 +99,7 @@ Page content START -->
 							<div class="col-12">
 								<label class="form-label">Full name</label>
 								<div class="input-group">
-									<input type="text" class="form-control" v-model="first_name" :placeholder="profile.first_name" >
+									<input type="text" class="form-control" v-model="first_name"  :placeholder="profile.first_name" >
 									<input type="text" class="form-control" v-model="last_name" :placeholder="profile.last_name" >
 								</div>
 							</div>
@@ -363,7 +363,7 @@ export default {
           
         })},
 
-        submitChanges(){
+        async submitChanges(){
           const data = {
             first_name:this.first_name,
             last_name:this.last_name,
@@ -375,7 +375,7 @@ export default {
             
           }
 
-          axios
+        await  axios
           .put('accounts/profile-edit', data)
           .then(response => {
             console.log(response.data)
