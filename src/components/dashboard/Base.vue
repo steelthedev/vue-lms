@@ -21,10 +21,13 @@
 									<a class="list-group-item" href="instructor-order.html"><i class="bi bi-folder-check fa-fw me-2"></i>Orders</a>
 									<a class="list-group-item" href="instructor-review.html"><i class="bi bi-star fa-fw me-2"></i>Reviews</a>
 									<router-link class="list-group-item" :to="{name:'EditProfile'}" ><i class="bi bi-pencil-square fa-fw me-2"></i>Edit Profile</router-link>
-									<a class="list-group-item" href="instructor-payout.html"><i class="bi bi-wallet2 fa-fw me-2"></i>Payouts</a>
+									<!--<a class="list-group-item" href="instructor-payout.html"><i class="bi bi-wallet2 fa-fw me-2"></i>Payouts</a>
 									<a class="list-group-item" href="instructor-setting.html"><i class="bi bi-gear fa-fw me-2"></i>Settings</a>
 									<a class="list-group-item" href="instructor-delete-account.html"><i class="bi bi-trash fa-fw me-2"></i>Delete Profile</a>
-									<a class="list-group-item text-danger bg-danger-soft-hover" href="sign-in.html"><i class="fas fa-sign-out-alt fa-fw me-2"></i>Sign Out</a>
+									
+                  -->
+
+                  <a class="list-group-item text-danger bg-danger-soft-hover" @click="logout()"><i class="fas fa-sign-out-alt fa-fw me-2"></i>Sign Out</a>
                   
                 </div>
 							</div>
@@ -51,8 +54,8 @@
 							<div class="bg-dark border rounded-3 pb-0 p-3 w-100">
 								<!-- Dashboard menu -->
 								<div class="list-group list-group-dark list-group-borderless">
-									<a class="list-group-item" href="student-dashboard.html"><i class="bi bi-ui-checks-grid fa-fw me-2"></i>Dashboard</a>
-									<a class="list-group-item active" href="student-subscription.html"><i class="bi bi-card-checklist fa-fw me-2"></i>My Subscriptions</a>
+									<router-link class="list-group-item"  :to="{name:'Myaccount'}"><i class="bi bi-ui-checks-grid fa-fw me-2"></i>Dashboard</router-link>
+									<a class="list-group-item" href="student-subscription.html"><i class="bi bi-card-checklist fa-fw me-2"></i>My Subscriptions</a>
 									<a class="list-group-item" href="student-course-list.html"><i class="bi bi-basket fa-fw me-2"></i>My Courses</a>
 									<a class="list-group-item" href="student-payment-info.html"><i class="bi bi-credit-card-2-front fa-fw me-2"></i>Payment info</a>
 									<a class="list-group-item" href="student-bookmark.html"><i class="bi bi-cart-check fa-fw me-2"></i>Wishlist</a>
@@ -85,6 +88,7 @@ export default {
         this.getProfile()
       },
     methods:{
+
         async logout() {
             console.log('logout')
             await axios
