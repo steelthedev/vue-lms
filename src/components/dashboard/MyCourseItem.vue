@@ -1,23 +1,5 @@
 <template>
-    <!-- Card body START -->
-							<div class="card-body">
-								<div class="table-responsive-lg border-0 rounded-3">
-									<!-- Table START -->
-									<table class="table table-dark-gray align-middle p-4 mb-0">
-										<!-- Table head -->
-										<thead>
-											<tr>
-												<th scope="col" class="border-0 rounded-start">Course Name</th>
-												
-												<th scope="col" class="border-0">Amount</th>
-												
-                        
-												
-												<th scope="col" class="border-0 rounded-end">Action</th>
-											</tr>
-										</thead>
-										<!-- Table body START -->
-										<tbody>
+
                       
 											<!-- Table item -->
 											<tr v-for=" item in course.items " :key="item.course.id">
@@ -47,28 +29,7 @@
 												</td>
 											</tr>
 	
-										</tbody>
-										<!-- Table body END -->
-									</table>
-									<!-- Table END -->
-								</div>
-
-								<!-- Pagination -->
-								<div class="d-sm-flex justify-content-sm-between align-items-sm-center mt-3">
-									<!-- Content -->
-									<p class="mb-0 text-center text-sm-start">Showing 1 to 8 of 20 entries</p>
-									<!-- Pagination -->
-									<nav class="d-flex justify-content-center mb-0" aria-label="navigation">
-										<ul class="pagination pagination-sm pagination-primary-soft mb-0 pb-0">
-											<li class="page-item mb-0"><a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-left"></i></a></li>
-											<li class="page-item mb-0"><a class="page-link" href="#">1</a></li>
-											<li class="page-item mb-0 active"><a class="page-link" href="#">2</a></li>
-											<li class="page-item mb-0"><a class="page-link" href="#">3</a></li>
-											<li class="page-item mb-0"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
+									
 </template>
 <script>
 export default {

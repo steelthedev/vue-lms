@@ -134,7 +134,7 @@ Page content START -->
 							<!-- About me -->
 							<div class="col-12">
 								<label class="form-label">About me</label>
-								<textarea v-model="about" class="form-control" rows="3" v-html="profile.about_me"></textarea>
+								<textarea v-model="about" class="form-control" rows="3" :placeholder="profile.about_me"></textarea>
 								<div class="form-text">Brief description for your profile.</div> 
 							</div>
 
@@ -363,7 +363,7 @@ export default {
           
         })},
 
-        async submitChanges(){
+        submitChanges(){
           const data = {
             first_name:this.first_name,
             last_name:this.last_name,
@@ -375,11 +375,12 @@ export default {
             
           }
 
-        await  axios
-          .put('accounts/profile-edit', data)
+         axios
+          .patch('accounts/profile-edit', data)
           .then(response => {
             console.log(response.data)
             this.getProfile()
+           
           })
           .catch(error => {
             console.log(error)

@@ -18,8 +18,10 @@ Page Banner START -->
 						<!-- Avatar -->
 						<div class="col-auto mt-4 mt-md-0">
 							<div class="avatar avatar-xxl mt-n3">
+                <a :href="profile.get_profile_picture">
 								<img class="avatar-img rounded-circle border border-white border-3 shadow" :src="profile.get_profile_picture"  alt="">
-							</div>
+							</a> 
+           </div>
 						</div>
 						<!-- Profile info -->
 						<div class="col d-md-flex justify-content-between align-items-center mt-4">
@@ -32,7 +34,8 @@ Page Banner START -->
 								</ul>
 							</div>
 							<!-- Button -->
-							<div class="d-flex align-items-center mt-2 mt-md-0">
+
+							<div class="d-flex align-items-center mt-2 mt-md-0" v-if="profile.status == 'instructor' ">
 							<router-link :to="{name:'Addcourse'}" class="btn btn-success mb-0">Create a course</router-link> 
 							</div>
 						</div>
@@ -76,7 +79,7 @@ Page content START -->
 							<span class="display-6 text-warning mb-0"><i class="fas fa-tv fa-fw"></i></span>
 							<div class="ms-4">
 								<div class="d-flex">
-									<h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="25"	data-purecounter-delay="200">0</h5>
+									<h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="25"	data-purecounter-delay="200">10</h5>
 								</div>
 								<span class="mb-0 h6 fw-light">Total Courses</span>
 							</div>
@@ -88,7 +91,7 @@ Page content START -->
 							<span class="display-6 text-purple mb-0"><i class="fas fa-user-graduate fa-fw"></i></span>
 							<div class="ms-4">
 								<div class="d-flex">
-									<h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="25"	data-purecounter-delay="200">0</h5>
+									<h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="25"	data-purecounter-delay="200">200</h5>
 									<span class="mb-0 h5">K+</span>
 								</div>
 								<span class="mb-0 h6 fw-light">Total Students</span>
@@ -101,7 +104,7 @@ Page content START -->
 							<span class="display-6 text-info mb-0"><i class="fas fa-gem fa-fw"></i></span>
 							<div class="ms-4">
 								<div class="d-flex">
-									<h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="12" data-purecounter-delay="300">0</h5>
+									<h5 class="purecounter mb-0 fw-bold" data-purecounter-start="100" data-purecounter-end="200" data-purecounter-delay="300">100</h5>
 									<span class="mb-0 h5">K</span>
 								</div>
 								<span class="mb-0 h6 fw-light">Enrolled Students</span>
@@ -145,14 +148,54 @@ Page content START -->
 							<!-- Card header START -->
 							<div class="card-header bg-transparent border-bottom">
 								<div class="d-sm-flex justify-content-sm-between align-items-center">
-									<h3 class="mb-2 mb-sm-0">Most Selling Courses</h3>
+									<h3 class="mb-2 mb-sm-0" v-if="profile.status == 'instructor' ">Most Selling Courses</h3>
+                  <h3 class="mb-2 mb-sm-0" v-if="profile.status == 'student' ">My Courses</h3>
 									<a href="#" class="btn btn-sm btn-primary-soft mb-0">View all</a>
 								</div>
 							</div>
 							<!-- Card header END -->
-
+    <!-- Card body START -->
+							<div class="card-body">
+								<div class="table-responsive-lg border-0 rounded-3">
+									<!-- Table START -->
+									<table class="table table-dark-gray align-middle p-4 mb-0">
+										<!-- Table head -->
+										<thead>
+											<tr>
+												<th scope="col" class="border-0 rounded-start">Course Name</th>
+												
+												<th scope="col" class="border-0">Amount</th>
+												
+                        
+												
+												<th scope="col" class="border-0 rounded-end">Action</th>
+											</tr>
+										</thead>
+										<!-- Table body START -->
+										<tbody>
               <MyCourseItem v-for="course in courses " :key="course.id" :course=course />
-							
+								</tbody>
+										<!-- Table body END -->
+									</table>
+									<!-- Table END -->
+								</div>
+
+								<!-- Pagination -->
+								<div class="d-sm-flex justify-content-sm-between align-items-sm-center mt-3">
+									<!-- Content -->
+									<p class="mb-0 text-center text-sm-start">Showing 1 to 8 of 20 entries</p>
+									<!-- Pagination -->
+									<nav class="d-flex justify-content-center mb-0" aria-label="navigation">
+										<ul class="pagination pagination-sm pagination-primary-soft mb-0 pb-0">
+											<li class="page-item mb-0"><a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-left"></i></a></li>
+											<li class="page-item mb-0"><a class="page-link" href="#">1</a></li>
+											<li class="page-item mb-0 active"><a class="page-link" href="#">2</a></li>
+											<li class="page-item mb-0"><a class="page-link" href="#">3</a></li>
+											<li class="page-item mb-0"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
 							<!-- Card body START -->
 						</div>
 					</div>
