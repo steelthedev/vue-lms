@@ -75,7 +75,7 @@ Page content START -->
 					<!-- Card body START -->
 					<div class="card-body">
 						<!-- Form -->
-						<form class="row g-4" @submit.prevent="submitChanges">
+						<form class="row g-4" enctype="multipart/form-data" @submit.prevent="submitChanges" name="edit">
 
 							<!-- Profile picture -->
 							<div class="col-12 justify-content-center align-items-center">
@@ -91,7 +91,7 @@ Page content START -->
 									</label>
 									<!-- Upload button -->
 									<label class="btn btn-primary-soft mb-0" for="uploadfile-1">Change</label>
-									<input id="uploadfile-1" class="form-control d-none" type="file">
+									<input id="uploadfile-1" @change="onFileChange"  class="form-control d-none" type="file">
 								</div>
 							</div>
 
@@ -99,8 +99,8 @@ Page content START -->
 							<div class="col-12">
 								<label class="form-label">Full name</label>
 								<div class="input-group">
-									<input type="text" class="form-control" v-model="first_name"  :placeholder="profile.first_name" >
-									<input type="text" class="form-control" v-model="last_name" :placeholder="profile.last_name" >
+									<input type="text" class="form-control" name="first_name"  :value="profile.first_name" >
+									<input type="text" class="form-control" name="last_name" :value="profile.last_name" >
 								</div>
 							</div>
 
@@ -109,32 +109,32 @@ Page content START -->
 								<label class="form-label">Username</label>
 								<div class="input-group">
 									<span class="input-group-text">iEdu.com</span>
-									<input type="text" v-model="username" class="form-control"  name="username" :placeholder="profile.username">
+									<input type="text" class="form-control" :value="profile.username"  name="username" >
 								</div>
 							</div>
 
 							<!-- Email id -->
 							<div class="col-md-6">
 								<label class="form-label">Email id</label>
-								<input class="form-control" type="email" v-model="email" :placeholder="profile.email"  >
+								<input class="form-control" type="email" name="email" :value="profile.email"  >
 							</div>
 
 							<!-- Phone number -->
 							<div class="col-md-6">
 								<label class="form-label">Phone number</label>
-								<input type="text" class="form-control" :placeholder="profile.phone" v-model="phone" >
+								<input type="text" class="form-control" name="phone" :value="profile.phone" >
 							</div>
 
 							<!-- Location -->
 							<div class="col-md-6">
 								<label class="form-label">Location</label>
-								<input class="form-control" type="text" v-model="location" :placeholder="profile.location">
+								<input class="form-control" type="text" :value="profile.location" name="location" >
 							</div>
 							
 							<!-- About me -->
 							<div class="col-12">
 								<label class="form-label">About me</label>
-								<textarea v-model="about" class="form-control" rows="3" :placeholder="profile.about_me"></textarea>
+								<textarea class="form-control" rows="3" name="about" :value="profile.about_me"></textarea>
 								<div class="form-text">Brief description for your profile.</div> 
 							</div>
 
@@ -156,169 +156,7 @@ Page content START -->
 				</div>
 				<!-- Edit profile END -->
 				
-				<div class="row g-4 mt-3">
-					<!-- Linked account START -->
-					<div class="col-lg-6">
-						<div class="card bg-transparent border rounded-3">
-							<!-- Card header -->
-							<div class="card-header bg-transparent border-bottom">
-								<h5 class="card-header-title mb-0">Linked account</h5>
-							</div>
-							<!-- Card body START -->
-							<div class="card-body pb-0">
-								<!-- Google -->
-								<div class="position-relative mb-4 d-sm-flex bg-success bg-opacity-10 border border-success p-3 rounded">
-									<!-- Title and content -->
-									<h2 class="fs-1 mb-0 me-3"><i class="fab fa-google text-google-icon"></i></h2>
-									<div>
-										<div class="position-absolute top-0 start-100 translate-middle bg-white rounded-circle lh-1 h-20px">
-											<i class="bi bi-check-circle-fill text-success fs-5"></i>
-										</div>
-											<h6 class="mb-1">Google</h6>
-											<p class="mb-1 small">You are successfully connected to your Google account</p>
-											<!-- Button -->
-											<button type="button" class="btn btn-sm btn-danger mb-0">Invoke</button>
-											<a href="#" class="btn btn-sm btn-link text-body mb-0">Learn more</a>
-									</div>
-								</div>
-
-								<!-- Linkedin -->
-								<div class="mb-4 d-sm-flex border p-3 rounded">
-									<!-- Title and content -->
-									<h2 class="fs-1 mb-0 me-3"><i class="fab fa-linkedin-in text-linkedin"></i></h2>
-									<div>
-										<h6 class="mb-1">Linkedin</h6>
-										<p class="mb-1 small">Connect with Linkedin account for a personalized experience</p>
-										<!-- Button -->
-										<button type="button" class="btn btn-sm btn-primary mb-0">Connect Linkedin</button>
-										<a href="#" class="btn btn-sm btn-link text-body mb-0">Learn more</a>
-									</div>
-								</div>
-
-								<!-- Facebook -->
-								<div class="mb-4 d-sm-flex border p-3 rounded">
-									<!-- Title and content -->
-									<h2 class="fs-1 mb-0 me-3"><i class="fab fa-facebook text-facebook"></i></h2>
-									<div>
-										<h6 class="mb-1">Facebook</h6>
-										<p class="mb-1 small">Connect with Facebook account for a personalized experience</p>
-										<!-- Button -->
-										<button type="button" class="btn btn-sm btn-primary mb-0">Connect Facebook</button>
-										<a href="#" class="btn btn-sm btn-link text-body mb-0">Learn more</a>
-									</div>
-								</div>
-							</div>
-							<!-- Card body END -->
-						</div>
-					</div>
-					<!-- Linked account end -->
-
-					<!-- Social media profile START -->
-					<div class="col-lg-6">
-						<div class="card bg-transparent border rounded-3">
-							<!-- Card header -->
-							<div class="card-header bg-transparent border-bottom">
-								<h5 class="card-header-title mb-0">Social media profile</h5>
-							</div>
-							<!-- Card body START -->
-							<div class="card-body">
-								<!-- Facebook username -->
-								<div class="mb-3">
-									<label class="form-label"><i class="fab fa-facebook text-facebook me-2"></i>Enter facebook username</label>
-									<input class="form-control" type="text" value="loristev" placeholder="Enter username">
-								</div>
-								
-								<!-- Twitter username -->
-								<div class="mb-3">
-									<label class="form-label"><i class="bi bi-twitter text-twitter me-2"></i>Enter twitter username</label>
-									<input class="form-control" type="text" value="loristev" placeholder="Enter username">
-								</div>
-
-								<!-- Instagram username -->
-								<div class="mb-3">
-									<label class="form-label"><i class="fab fa-instagram text-instagram-gradient me-2"></i>Enter instagram username</label>
-									<input class="form-control" type="text" value="loristev" placeholder="Enter username">
-								</div>
-
-								<!-- Youtube -->
-								<div class="mb-3">
-									<label class="form-label"><i class="fab fa-youtube text-youtube me-2"></i>Add your youtube profile URL</label>
-									<input class="form-control" type="text" value="https://www.youtube.com/in/Eduport-05620abc" placeholder="Enter username">
-								</div>
-
-								<!-- Button -->
-								<div class="d-flex justify-content-end mt-4">
-									<button type="submit" class="btn btn-primary mb-0">Save changes</button>
-								</div>
-							</div>
-							<!-- Card body END -->
-						</div>
-					</div>
-					<!-- Social media profile END -->
-
-					<!-- EMail change START -->
-					<div class="col-lg-6">
-						<div class="card bg-transparent border rounded-3">
-							<!-- Card header -->
-							<div class="card-header bg-transparent border-bottom">
-								<h5 class="card-header-title mb-0">Update email</h5>
-							</div>
-							<!-- Card body -->
-							<div class="card-body">
-								<p>Your current email address is <span class="text-primary">example@gmail.com</span></p>
-								<!-- Email -->
-								<form>
-									<label class="form-label">Enter your new email id</label>
-									<input class="form-control" type="email" placeholder="Enter new email">
-									<div class="d-flex justify-content-end mt-4">
-										<button type="button" class="btn btn-primary mb-0">Update email</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-					<!-- EMail change end -->
-
-					<!-- Password change START -->
-					<div class="col-lg-6">
-						<div class="card border bg-transparent rounded-3">
-							<!-- Card header -->
-							<div class="card-header bg-transparent border-bottom">
-								<h5 class="card-header-title mb-0">Update password</h5>
-							</div>
-							<!-- Card body START -->
-							<div class="card-body">
-								<!-- Current password -->
-								<div class="mb-3">
-									<label class="form-label">Current password</label>
-									<input class="form-control" type="password" placeholder="Enter current password">
-								</div>
-								<!-- New password -->
-								<div class="mb-3">
-									<label class="form-label"> Enter new password</label>
-									<div class="input-group">
-										<input class="form-control" type="password" placeholder="Enter new password">
-										<span class="input-group-text p-0 bg-transparent">
-											<i class="far fa-eye cursor-pointer p-2 w-40px"></i>
-										</span>
-									</div>
-									<div class="rounded mt-1" id="psw-strength"></div>
-								</div>
-								<!-- Confirm password -->
-								<div>
-									<label class="form-label">Confirm new password</label>
-									<input class="form-control" type="password" placeholder="Enter new password">
-								</div>
-								<!-- Button -->
-								<div class="d-flex justify-content-end mt-4">
-									<button type="button" class="btn btn-primary mb-0">Change password</button>
-								</div>
-							</div>
-							<!-- Card body END -->
-						</div>
-					</div>
-					<!-- Password change end -->
-				</div>
+	
 			</div>
 			<!-- Main content END -->
 		</div><!-- Row END -->
@@ -340,13 +178,7 @@ export default {
     data(){
         return{
             profile:[],
-            first_name:'',
-            last_name:'',
-            email:'',
-            location:'',
-            about:'',
-            username:'',
-            phone:''
+           
         }
     },
     mounted(){
@@ -363,15 +195,22 @@ export default {
           
         })},
 
-        submitChanges(){
+        submitChanges(){ 
+          let getLocation=document.forms["edit" ]["location"].value;
+          let getLastNAme=document.forms["edit" ]["last_name"].value;
+          let getFirstNAme=document.forms["edit" ]["first_name"].value;
+          let getEmail=document.forms["edit" ]["email"].value;
+          let getUsername=document.forms["edit" ]["username"].value;
+          let getAbout=document.forms["edit" ]["about"].value;
+          let getPhone=document.forms["edit" ]["phone"].value;
           const data = {
-            first_name:this.first_name,
-            last_name:this.last_name,
-            email:this.email,
-            location:this.location,
-            about_me:this.about,
-            username:this.username,
-            phone:this.phone,
+            first_name:getFirstNAme,
+            last_name:getLastNAme,
+            email:getEmail,
+            location:getLocation,
+            about_me:getAbout,
+            username:getUsername,
+            phone:getPhone,
             
           }
 
@@ -385,8 +224,24 @@ export default {
           .catch(error => {
             console.log(error)
           })
-        }
-  }
+        },
+      
+      onFileChange(e) {
+      const formData = new FormData();
+      formData.append("image", e.target.files[0]);
+    
+      axios
+      .patch('accounts/change-picture', formData)
+      .then(response =>{
+        console.log(response.data)
+        this.getProfile()
+
+      })
+      .catch(error =>{
+        console.log(error)
+      })
+  },
+ }
 }
 </script>
 <style scoped>
