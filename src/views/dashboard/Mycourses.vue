@@ -1,128 +1,188 @@
 <template>
-     	<!-- Right sidebar START -->
-			<div class="col-xl-3" v-if="profile.status === 'instructor' ">
-				<!-- Responsive offcanvas body START -->
-				<nav class="navbar navbar-light navbar-expand-xl mx-0">
-					<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-						<!-- Offcanvas header -->
-						<div class="offcanvas-header bg-light">
-							<h5 class="offcanvas-title" id="offcanvasNavbarLabel">My profile</h5>
-							<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<main>
+	
+<!-- =======================
+Page Banner START -->
+<section class="pt-0">
+	<!-- Main banner background image -->
+	<div class="container-fluid px-0">
+		<div class="bg-blue h-100px h-md-200px rounded-0" style="background:url(assets/images/pattern/04.png) no-repeat center center; background-size:cover;">
+		</div>
+	</div>
+	<div class="container mt-n4">
+		<div class="row">
+			<!-- Profile banner START -->
+			<div class="col-12">
+				<div class="card bg-transparent card-body p-0">
+					<div class="row d-flex justify-content-between">
+						<!-- Avatar -->
+						<div class="col-auto mt-4 mt-md-0">
+							<div class="avatar avatar-xxl mt-n3">
+                <a :href="profile.get_profile_picture">
+								<img class="avatar-img rounded-circle border border-white border-3 shadow" :src="profile.get_profile_picture"  alt="">
+							</a> 
+           </div>
 						</div>
-						<!-- Offcanvas body -->
-						<div class="offcanvas-body p-3 p-xl-0">
-							<div class="bg-dark border rounded-3 pb-0 p-3 w-100">
-								<!-- Dashboard menu -->
-								<div class="list-group list-group-dark list-group-borderless">
-									<router-link class="list-group-item active" :to="{name:'Myaccount'}"><i class="bi bi-ui-checks-grid fa-fw me-2"></i>Dashboard</router-link>
-									<router-link class="list-group-item" :to="{name:'ManageCourse'}"><i class="bi bi-basket fa-fw me-2"></i>My Courses</router-link>
-									<a class="list-group-item" href="instructor-earning.html"><i class="bi bi-graph-up fa-fw me-2"></i>Earnings</a>
-									<a class="list-group-item" href="instructor-studentlist.html"><i class="bi bi-people fa-fw me-2"></i>Students</a>
-									<a class="list-group-item" href="instructor-order.html"><i class="bi bi-folder-check fa-fw me-2"></i>Orders</a>
-									<a class="list-group-item" href="instructor-review.html"><i class="bi bi-star fa-fw me-2"></i>Reviews</a>
-									<router-link class="list-group-item" :to="{name:'EditProfile'}" ><i class="bi bi-pencil-square fa-fw me-2"></i>Edit Profile</router-link>
-									<!--<a class="list-group-item" href="instructor-payout.html"><i class="bi bi-wallet2 fa-fw me-2"></i>Payouts</a>
-									<a class="list-group-item" href="instructor-setting.html"><i class="bi bi-gear fa-fw me-2"></i>Settings</a>
-									<a class="list-group-item" href="instructor-delete-account.html"><i class="bi bi-trash fa-fw me-2"></i>Delete Profile</a>
-									
-                  -->
+						<!-- Profile info -->
+						<div class="col d-md-flex justify-content-between align-items-center mt-4">
+							<div>
+								<h1 class="my-1 fs-4">{{profile.first_name}} {{profile.last_name}} <i class="bi bi-patch-check-fill text-info small"></i></h1>
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item h6 fw-light me-3 mb-1 mb-sm-0"><i class="fas fa-star text-warning me-2"></i>4.5/5.0</li>
+									<li class="list-inline-item h6 fw-light me-3 mb-1 mb-sm-0"><i class="fas fa-user-graduate text-orange me-2"></i>12k Enrolled Students</li>
+									<li class="list-inline-item h6 fw-light me-3 mb-1 mb-sm-0"><i class="fas fa-book text-purple me-2"></i>25 Courses</li>
+								</ul>
+							</div>
+							<!-- Button -->
 
-                  <a class="list-group-item text-danger bg-danger-soft-hover" @click="logout()"><i class="fas fa-sign-out-alt fa-fw me-2"></i>Sign Out</a>
-                  
-                </div>
+							<div class="d-flex align-items-center mt-2 mt-md-0" v-if="profile.status == 'instructor' ">
+							<router-link :to="{name:'Addcourse'}" class="btn btn-success mb-0">Create a course</router-link> 
 							</div>
 						</div>
 					</div>
-				</nav>
-				<!-- Responsive offcanvas body END -->
+				</div>
+				<!-- Profile banner END -->
+
+				<!-- Advanced filter responsive toggler START -->
+				<!-- Divider -->
+				<hr class="d-xl-none">
+				<div class="col-12 col-xl-3 d-flex justify-content-between align-items-center">
+					<a class="h6 mb-0 fw-bold d-xl-none" href="#">Menu</a>
+					<button class="btn btn-primary d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+						<i class="fas fa-sliders-h"></i>
+					</button>
+				</div>
+				<!-- Advanced filter responsive toggler END -->
 			</div>
-			<!-- Right sidebar END -->
+		</div>
+	</div>
+</section>
+<!-- =======================
+Page Banner END -->
+
+<!-- =======================
+Page content START -->
+<section class="pt-0">
+	<div class="container">
+		<div class="row">
+		
+        <Base />
+
+			<!-- Main content START -->
+			<div class="col-xl-9">
 
 
 
-        <div class="col-xl-3" v-else-if="profile.status === 'student'">
-				<!-- Responsive offcanvas body START -->
-				<nav class="navbar navbar-light navbar-expand-xl mx-0">
-					<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-						<!-- Offcanvas header -->
-						<div class="offcanvas-header bg-light">
-							<h5 class="offcanvas-title" id="offcanvasNavbarLabel">My profile</h5>
-							<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-						</div>
-						<!-- Offcanvas body -->
-						<div class="offcanvas-body p-3 p-xl-0">
-							<div class="bg-dark border rounded-3 pb-0 p-3 w-100">
-								<!-- Dashboard menu -->
-								<div class="list-group list-group-dark list-group-borderless">
-                  	<router-link class="list-group-item"  :to="{name:'Home'}"><i class="bi bi-ui-checks-grid fa-fw me-2"></i>Home</router-link>
-									<router-link class="list-group-item"  :to="{name:'Myaccount'}"><i class="bi bi-ui-checks-grid fa-fw me-2"></i>Dashboard</router-link>
-                   <router-link class="list-group-item" :to="{name:'Mycourses'}"><i class="bi bi-pencil-square fa-fw me-2"></i>Purchased courses</router-link>
-                  <router-link class="list-group-item" :to="{name:'EditProfile'}"><i class="bi bi-pencil-square fa-fw me-2"></i>Edit Profile</router-link>
-									<!-- <a class="list-group-item" href="student-subscription.html"><i class="bi bi-card-checklist fa-fw me-2"></i>My Subscriptions</a>
+				<!-- Course List table START -->
+				<div class="row">
+					<div class="col-12">
+						<div class="card border bg-transparent rounded-3 ">
+							<!-- Card header START -->
+							<div class="card-header bg-transparent border-bottom">
+								<div class="d-sm-flex justify-content-sm-between align-items-center">
+									<h3 class="mb-2 mb-sm-0" v-if="profile.status == 'instructor' ">Most Selling Courses</h3>
+                  <h3 class="mb-2 mb-sm-0" v-if="profile.status == 'student' ">My Courses</h3>
 									
-									<a class="list-group-item" href="student-payment-info.html"><i class="bi bi-credit-card-2-front fa-fw me-2"></i>Payment info</a>
-									<a class="list-group-item" href="student-bookmark.html"><i class="bi bi-cart-check fa-fw me-2"></i>Wishlist</a>
-								
-									<a class="list-group-item" href="instructor-setting.html"><i class="bi bi-gear fa-fw me-2"></i>Settings</a>
-									<a class="list-group-item" href="instructor-delete-account.html"><i class="bi bi-trash fa-fw me-2"></i>Delete Profile</a>  -->
-									 <a class="list-group-item text-danger bg-danger-soft-hover" @click="logout()"><i class="fas fa-sign-out-alt fa-fw me-2"></i>Sign Out</a>
 								</div>
 							</div>
+							<!-- Card header END -->
+    <!-- Card body START -->
+							<div class="card-body">
+								<div class="table-responsive-lg border-0 rounded-3">
+									<!-- Table START -->
+									<table class="table table-dark-gray align-middle p-4 mb-0">
+										<!-- Table head -->
+										<thead>
+											<tr>
+												<th scope="col" class="border-0 rounded-start">Course Name</th>
+												
+												<th scope="col" class="border-0">Amount</th>
+												
+                        
+												
+												<th scope="col" class="border-0 rounded-end">Action</th>
+											</tr>
+										</thead>
+										<!-- Table body START -->
+										<tbody>
+              <MyCourseItem v-for="course in courses " :key="course.id" :course=course />
+								</tbody>
+										<!-- Table body END -->
+									</table>
+									<!-- Table END -->
+								</div>
+
+								<!-- Pagination -->
+								<div class="d-sm-flex justify-content-sm-between align-items-sm-center mt-3">
+									<!-- Content -->
+									<p class="mb-0 text-center text-sm-start">Showing 1 to 8 of 20 entries</p>
+									<!-- Pagination -->
+									<nav class="d-flex justify-content-center mb-0" aria-label="navigation">
+										<ul class="pagination pagination-sm pagination-primary-soft mb-0 pb-0">
+											<li class="page-item mb-0"><a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-left"></i></a></li>
+											<li class="page-item mb-0"><a class="page-link" href="#">1</a></li>
+											<li class="page-item mb-0 active"><a class="page-link" href="#">2</a></li>
+											<li class="page-item mb-0"><a class="page-link" href="#">3</a></li>
+											<li class="page-item mb-0"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<!-- Card body START -->
 						</div>
 					</div>
-				</nav>
-				<!-- Responsive offcanvas body END -->
+				</div>
+				<!-- Course List table END -->
 			</div>
+			<!-- Main content END -->
+		</div><!-- Row END -->
+	</div>
+</section>
+<!-- =======================
+Page content END -->
 
-
-
+</main>
 </template>
 <script>
+import Base from '../../components/dashboard/Base.vue'
 import axios from 'axios'
+import MyCourseItem from '../../components/dashboard/MyCourseItem.vue'
 export default {
-    name:'Base',
-
-    data(){
-      return{
-        profile :[]
-      }
+    components:{
+        Base, MyCourseItem
     },
-    mounted(){
+    data(){
+        return{
+             profile:[],
+            courses:[]
+        }
+    },
+    mounted() {
+        this.getMycourse()
         this.getProfile()
-      },
-    methods:{
-
-        async logout() {
-            console.log('logout')
-            await axios
-              .post('accounts/api/v1/token/logout/')
-              .then(response => {
-                console.log('Logged out')
-              })
-              .catch(error => {
-                console.log(error)
-              })
-            axios.defaults.headers.common['Authorization'] = ""
-            localStorage.removeItem('token')
-            this.$store.commit('removeToken')
-            this.$router.push('/')
-      },
-   async getProfile(){
-        await axios
+    },
+    methods: {
+        getProfile(){
+         axios
         .get('accounts/profile')
         .then(response => {
          
-          console.log(response.data)
           this.profile = response.data
           
         })
       },
+             getMycourse(){
+        axios
+        .get('accounts/my-courses')
+        .then(response => {
+          console.log(response.data)
+          this.courses = response.data
+          
+        })
+      },
     },
-
-   
 }
 </script>
-
 <style scoped>
 @charset "UTF-8";
 /*!

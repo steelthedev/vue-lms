@@ -9,6 +9,7 @@ import Addcourse from '../views/dashboard/Addcourse.vue'
 import ManageCourse from '../views/dashboard/ManageCourse.vue'
 import EditProfile from '../views/dashboard/EditProfile.vue'
 import Billing from '../views/dashboard/Billing.vue'
+import Mycourses from '../views/dashboard/Mycourses.vue'
 import Notfound from '../views/404.vue'
 import Search from '../views/Search.vue'
 import Cart from '../views/Cart.vue'
@@ -44,6 +45,11 @@ const routes = [
     component:Checkout
   },
 
+  {
+    path: '/my-courses',
+    name: 'Mycourses',
+    component:Mycourses
+  },
 
 
 
