@@ -167,8 +167,8 @@ Page Banner START -->
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb breadcrumb-dots mb-0">
 								<li class="breadcrumb-item"><router-link :to="{name:'Home'}">Home</router-link></li>
-								<li class="breadcrumb-item"><router-link :to="{name:'Courses'}">Home</router-link></li>
-								<li class="breadcrumb-item active" aria-current="page"><router-link :to="{name:'Cart'}">Home</router-link></li>
+								<li class="breadcrumb-item"><router-link :to="{name:'Courses'}">Courses</router-link></li>
+								<li class="breadcrumb-item active" aria-current="page">Cart</li>
 							</ol>
 						</nav>
 					</div>
