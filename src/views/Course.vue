@@ -172,14 +172,14 @@ Page content START -->
 							<!-- Content END -->
 
 							<!-- Content START -->
-							<div class="tab-pane fade" id="course-pills-2" role="tabpanel" aria-labelledby="course-pills-tab-2">
+							<div class="tab-pane fade" id="course-pills-2" role="tabpanel" aria-labelledby="course-pills-tab-2" >
 								<!-- Course accordion START -->
 								<div class="accordion accordion-icon accordion-bg-light" id="accordionExample2">
 									<!-- Item -->
-									<div class="accordion-item mb-3">
+									<div class="accordion-item mb-3" v-for="lesson in lessons" :key="lesson">
 										<h6 class="accordion-header font-base" id="heading-1">
 											<button class="accordion-button fw-bold rounded d-sm-flex d-inline-block collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
-												Introduction of Digital Marketing 
+												{{lesson.title}}
 												<span class="small ms-0 ms-sm-2">(3 Lectures)</span> 
 											</button>
 										</h6>
@@ -196,639 +196,11 @@ Page content START -->
 													<p class="mb-0">2m 10s</p>
 												</div>
 
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px"> What is Digital Marketing What is Digital Marketing</span>
-													</div>
-													<p class="mb-0 text-truncate">15m 10s</p>
-												</div>
-
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Type of Digital Marketing</span>
-													</div>
-													<p class="mb-0">18m 10s</p>
-												</div>
 											</div>
 										</div>
 									</div>
 
-									<!-- Item -->
-									<div class="accordion-item mb-3">
-										<h6 class="accordion-header font-base" id="heading-2">
-											<button class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
-												Customer Life cycle
-												<span class="small ms-0 ms-sm-2">(4 Lectures)</span> 
-											</button>
-										</h6>
-										<div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionExample2">
-											<!-- Accordion body START -->
-											<div class="accordion-body mt-3">
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">What is Digital Marketing</span>
-													</div>
-													<p class="mb-0">11m 20s</p>
-												</div>
-
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">15 Tips for Writing Magnetic Headlines</span>
-													</div>
-													<p class="mb-0 text-truncate">25m 20s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">How to Write Like Your Customers Talk</span>
-													</div>
-													<p class="mb-0">11m 30s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<div>
-															<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static" data-bs-toggle="modal" data-bs-target="#exampleModal">
-																<i class="fas fa-play me-0"></i>
-															</a>
-														</div>
-														<div class="row g-sm-0 align-items-center">
-															<div class="col-sm-6">
-																<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-md-400px">How to Flip Features Into Benefits</span>
-															</div>
-															<div class="col-sm-6">
-																<span class="badge bg-orange text-white ms-2 ms-md-0"><i class="fas fa-lock fa-fw me-1"></i>Premium</span>
-															</div>
-														</div>
-													</div>
-													<p class="mb-0 d-inline-block text-truncate w-70px w-sm-60px">35m 30s</p>
-												</div>
-											</div>
-											<!-- Accordion body END -->
-										</div>
-									</div>
-
-									<!-- Item -->
-									<div class="accordion-item mb-3">
-										<h6 class="accordion-header font-base" id="heading-5">
-											<button class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
-												What is Search Engine Optimization(SEO) 
-												<span class="small ms-0 ms-sm-2">(10 Lectures)</span> 
-											</button>
-										</h6>
-										<div id="collapse-5" class="accordion-collapse collapse" aria-labelledby="heading-5" data-bs-parent="#accordionExample2">
-											<!-- Accordion body START -->
-											<div class="accordion-body mt-3">
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Introduction</span>
-													</div>
-													<p class="mb-0">1m 10s</p>
-												</div>
-													
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Overview of SEO</span>
-													</div>
-													<p class="mb-0 text-truncate">11m 03s</p>
-												</div>
-
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">How to SEO Optimise Your Homepage</span>
-													</div>
-													<p class="mb-0">15m 00s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">How to SEO Optimise Your Homepage</span>
-													</div>
-													<p class="mb-0">15m 00s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">How to Write Title Tags Search Engines Love</span>
-													</div>
-													<p class="mb-0">25m 30s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">SEO Keyword Planning</span>
-													</div>
-													<p class="mb-0">18m 10s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">eCommerce SEO</span>
-													</div>
-													<p class="mb-0">28m 10s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Internal and External Links</span>
-													</div>
-													<p class="mb-0">45m 10s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Mobile SEO</span>
-													</div>
-													<p class="mb-0">8m 10s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Off-page SEO</span>
-													</div>
-													<p class="mb-0">18m 10s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Measuring SEO Effectiveness</span>
-													</div>
-													<p class="mb-0">35m 10s</p>
-												</div>
-											</div>
-											<!-- Accordion body END -->
-										</div>
-									</div>
-
-									<!-- Item -->
-									<div class="accordion-item mb-3">
-										<h6 class="accordion-header font-base" id="heading-6">
-											<button class="accordion-button fw-bold collapsed rounded d-block d-sm-flex d-inline-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
-												Facebook ADS 
-												<span class="small ms-0 ms-sm-2">(3 Lectures)</span> 
-											</button>
-										</h6>
-										<div id="collapse-6" class="accordion-collapse collapse" aria-labelledby="heading-6" data-bs-parent="#accordionExample2">
-											<!-- Accordion body START -->
-											<div class="accordion-body mt-3">
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Introduction</span>
-													</div>
-													<p class="mb-0">1m 20s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Creating Facebook Pages</span>
-													</div>
-													<p class="mb-0 text-truncate">25m 20s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Facebook Page Custom URL</span>
-													</div>
-													<p class="mb-0">11m 30s</p>
-												</div>
-											</div>
-											<!-- Accordion body END -->
-										</div>	
-									</div>
-
-									<!-- Item -->
-									<div class="accordion-item mb-3">
-										<h6 class="accordion-header font-base" id="heading-7">
-											<button class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-7" aria-expanded="false" aria-controls="collapse-7">
-												YouTube Marketing 
-												<span class="small ms-0 ms-sm-2">(5 Lectures)</span> 
-											</button>
-										</h6>
-										<div id="collapse-7" class="accordion-collapse collapse" aria-labelledby="heading-7" data-bs-parent="#accordionExample2">
-											<!-- Accordion body START -->
-											<div class="accordion-body mt-3">
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Video Flow</span>
-													</div>
-													<p class="mb-0">25m 20s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Webmaster Tool</span>
-													</div>
-													<p class="mb-0 text-truncate">15m 20s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Featured Contents on Channel</span>
-													</div>
-													<p class="mb-0">32m 20s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<div>
-															<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static" data-bs-toggle="modal" data-bs-target="#exampleModal">
-																<i class="fas fa-play me-0"></i>
-															</a>
-														</div>
-														<div class="row g-sm-0 align-items-center">
-															<div class="col-sm-6">
-																<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-md-400px">Managing Comments</span>
-															</div>
-															<div class="col-sm-6">
-																<span class="badge bg-orange text-white ms-2 ms-md-0"><i class="fas fa-lock fa-fw me-1"></i>Premium</span>
-															</div>
-														</div>
-													</div>
-													<p class="mb-0 d-inline-block text-truncate w-70px w-sm-60px">20m 20s</p>
-												</div>
-
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<div>
-															<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static" data-bs-toggle="modal" data-bs-target="#exampleModal">
-																<i class="fas fa-play me-0"></i>
-															</a>
-														</div>
-														<div class="row g-sm-0 align-items-center">
-															<div class="col-sm-6">
-																<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-md-400px">Channel Analytics</span>
-															</div>
-															<div class="col-sm-6">
-																<span class="badge bg-orange text-white ms-2 ms-md-0"><i class="fas fa-lock fa-fw me-1"></i>Premium</span>
-															</div>
-														</div>
-													</div>
-													<p class="mb-0 d-inline-block text-truncate w-70px w-sm-60px">18m 20s</p>
-												</div>
-											</div>
-											<!-- Accordion body END -->
-										</div>
-									</div>
-									
-									<!-- Item -->
-									<div class="accordion-item mb-3">
-										<h6 class="accordion-header font-base" id="heading-8">
-											<button class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-8" aria-expanded="false" aria-controls="collapse-8">
-												Why SEO 
-												<span class="small ms-0 ms-sm-2">(8 Lectures)</span> 
-											</button>
-										</h6>
-										<div id="collapse-8" class="accordion-collapse collapse" aria-labelledby="heading-8" data-bs-parent="#accordionExample2">
-											<!-- Accordion body START -->
-											<div class="accordion-body mt-3">
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Understanding SEO</span>
-													</div>
-													<p class="mb-0">20m 20s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">On-Page SEO</span>
-													</div>
-													<p class="mb-0 text-truncate">15m 20s</p>
-												</div>
-
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Local SEO</span>
-													</div>
-													<p class="mb-0">16m 20s</p>
-												</div>
-
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Measuring SEO Effectiveness</span>
-													</div>
-													<p class="mb-0">12m 20s</p>
-												</div>
-
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<div>
-															<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static" data-bs-toggle="modal" data-bs-target="#exampleModal">
-																<i class="fas fa-play me-0"></i>
-															</a>
-														</div>
-														<div class="row g-sm-0 align-items-center">
-															<div class="col-sm-6">
-																<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-md-400px">Keywords in Blog and Articles</span>
-															</div>
-															<div class="col-sm-6">
-																<span class="badge bg-orange text-white ms-2 ms-md-0"><i class="fas fa-lock fa-fw me-1"></i>Premium</span>
-															</div>
-														</div>
-													</div>
-													<p class="mb-0 d-inline-block text-truncate w-70px w-sm-60px">15m 20s</p>
-												</div>
-
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<div>
-															<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static" data-bs-toggle="modal" data-bs-target="#exampleModal">
-																<i class="fas fa-play me-0"></i>
-															</a>
-														</div>
-														<div class="row g-sm-0 align-items-center">
-															<div class="col-sm-6">
-																<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-md-400px">SEO Keyword Planning</span>
-															</div>
-															<div class="col-sm-6">
-																<span class="badge bg-orange text-white ms-2 ms-md-0"><i class="fas fa-lock fa-fw me-1"></i>Premium</span>
-															</div>
-														</div>
-													</div>
-													<p class="mb-0 d-inline-block text-truncate w-70px w-sm-60px">36m 12s</p>
-												</div>
-											</div>
-											<!-- Accordion body END -->
-										</div>
-									</div>	
-
-									<!-- Item -->
-									<div class="accordion-item mb-3">
-										<h6 class="accordion-header font-base" id="heading-9">
-											<button class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-9" aria-expanded="false" aria-controls="collapse-9">
-												Google tag manager  
-												<span class="small ms-0 ms-sm-2">(4 Lectures)</span> 
-											</button>
-										</h6>
-										<div id="collapse-9" class="accordion-collapse collapse" aria-labelledby="heading-9" data-bs-parent="#accordionExample2">
-											<!-- Accordion body START -->
-											<div class="accordion-body mt-3">
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">G+ Pages Ranks Higher</span>
-													</div>
-													<p class="mb-0">13m 20s</p>
-												</div>
-
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Adding Contact Links</span>
-													</div>
-													<p class="mb-0 text-truncate">7m 20s</p>
-												</div>
-
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Google Hangouts</span>
-													</div>
-													<p class="mb-0">12m 20s</p>
-												</div>
-
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px"> Google Local Business</span>
-													</div>
-													<p class="mb-0 text-truncate">7m 20s</p>
-												</div>
-											</div>
-											<!-- Accordion body END -->
-										</div>
-									</div>	
-
-									<!-- Item -->
-									<div class="accordion-item mb-0">
-										<h6 class="accordion-header font-base" id="heading-10">
-											<button class="accordion-button fw-bold collapsed rounded d-sm-flex d-inline-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-10" aria-expanded="false" aria-controls="collapse-10">
-												Integration with Website 
-												<span class="small ms-0 ms-sm-2">(3 Lectures)</span> 
-											</button>
-										</h6>
-										<div id="collapse-10" class="accordion-collapse collapse" aria-labelledby="heading-10" data-bs-parent="#accordionExample2">
-											<!-- Accordion body START -->
-											<div class="accordion-body mt-3">
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Creating LinkedIn Account</span>
-													</div>
-													<p class="mb-0 text-truncate">13m 20s</p>
-												</div>
-												
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Advance Searching</span>
-													</div>
-													<p class="mb-0">31m 20s</p>
-												</div>
-
-												<hr> <!-- Divider -->
-
-												<!-- Course lecture -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
-															<i class="fas fa-play me-0"></i>
-														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">LinkedIn Mobile App</span>
-													</div>
-													<p class="mb-0 text-truncate">25m 20s</p>
-												</div>
-											</div>
-											<!-- Accordion body END -->
-										</div>
-									</div>	
+				
 
 								</div>
 								<!-- Course accordion END -->
@@ -836,20 +208,20 @@ Page content START -->
 							<!-- Content END -->
 
 							<!-- Content START -->
-							<div class="tab-pane fade" id="course-pills-3" role="tabpanel" aria-labelledby="course-pills-tab-3">
+							<div class="tab-pane fade" id="course-pills-3" role="tabpanel" aria-labelledby="course-pills-tab-3" >
 								<!-- Card START -->
-								<div class="card mb-0 mb-md-4">
+								<div class="card mb-0 mb-md-4" v-for="instructor in instructor " :key="instructor">
 									<div class="row g-0 align-items-center">
 										<div class="col-md-5">
 											<!-- Image -->
-											<img src="../assets/images/instructor/01.jpg" class="img-fluid rounded-3" alt="instructor-image">
+											<img :src="instructor.get_image" class="img-fluid rounded-3" alt="instructor-image">
 										</div>
 										<div class="col-md-7">
 											<!-- Card body -->
 											<div class="card-body">
 												<!-- Title -->
-												<h3 class="card-title mb-0">Louis Ferguson</h3>
-												<p class="mb-2">Instructor of Marketing</p>
+												<h3 class="card-title mb-0" v-html="instructor.title"></h3>
+												<p class="mb-2" v-html="instructor.field"></p>
 												<!-- Social button -->
 												<ul class="list-inline mb-3">
 													<li class="list-inline-item me-3">
@@ -897,22 +269,12 @@ Page content START -->
 													</li>
 												</ul>
 											</div>
+                      
 										</div>
 									</div>
 								</div>
 								<!-- Card END -->
 								
-								<!-- Instructor info -->
-								<h5 class="mb-3">About Instructor</h5>
-								<p class="mb-3">Fulfilled direction use continual set him propriety continued. Saw met applauded favorite deficient engrossed concealed and her. Concluded boy perpetual old supposing. Farther related bed and passage comfort civilly. Dashboard see frankness objection abilities. As hastened oh produced prospect formerly up am. Placing forming nay looking old married few has. Margaret disposed of add screened rendered six say his striking confined. </p>
-								<p class="mb-3">As it so contrasted oh estimating instrument. Size like body someone had. Are conduct viewing boy minutes warrant the expense? Tolerably behavior may admit daughters offending her ask own. Praise effect wishes change way and any wanted.</p>
-								<!-- Email address -->
-								<div class="col-12">
-									<ul class="list-group list-group-borderless mb-0">
-										<li class="list-group-item pb-0">Mail ID:<a href="#" class="ms-2">hello@email.com</a></li>
-										<li class="list-group-item pb-0">Web:<a href="#" class="ms-2">https://eduport.com</a></li>
-									</ul>
-								</div>
 							</div>
 							<!-- Content END -->
 
@@ -1448,6 +810,7 @@ export default {
         return{
             course: {},
             lessons :[],
+            instructor:{},
             comments:[],
             activeLesson:null,
             comment:{
@@ -1472,6 +835,7 @@ export default {
         .then(response => {
             this.course = response.data.course
             this.lessons = response.data.lessons
+            this.instructor = response.data.instructor
             this.loading = false
         })
 

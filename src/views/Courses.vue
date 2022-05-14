@@ -114,7 +114,7 @@ Page content START -->
 						<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					</div>
 					<div class="offcanvas-body p-3 p-lg-0">
-						<form>
+						<form name="filter" @submit.prevent="AdvancedFilter">
 								<!-- Category START -->
 								<div class="card card-body shadow p-4 mb-4">
 									<!-- Title -->
@@ -130,87 +130,28 @@ Page content START -->
 											<span class="small">(1256)</span>
 										</div>
 										<!-- Checkbox -->
-										<div class="d-flex justify-content-between align-items-center">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault10">
-												<label class="form-check-label" for="flexCheckDefault10">Development</label>
+										<div class="d-flex justify-content-between align-items-center" v-for="category in categories">
+											<div class="form-check"  >
+												<input class="form-check-input" type="checkbox" name="category" :value="category" id="flexCheckDefault10">
+												<label class="form-check-label" for="flexCheckDefault10">{{category.title}}</label>
 											</div>
-											<span class="small">(365)</span>
-										</div>
-										<!-- Checkbox -->
-										<div class="d-flex justify-content-between align-items-center">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault11">
-												<label class="form-check-label" for="flexCheckDefault11">Design</label>
-											</div>
-											<span class="small">(156)</span>
-										</div>
-										<!-- Checkbox -->
-										<div class="d-flex justify-content-between align-items-center">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault12">
-												<label class="form-check-label" for="flexCheckDefault12">Accounting</label>
-											</div>
-											<span class="small">(65)</span>
-										</div>
-										<!-- Checkbox -->
-										<div class="d-flex justify-content-between align-items-center">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault17">
-												<label class="form-check-label" for="flexCheckDefault17">Translation</label>
-											</div>
-											<span class="small">(245)</span>
-										</div>
-										<!-- Checkbox -->
-										<div class="d-flex justify-content-between align-items-center">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13">
-												<label class="form-check-label" for="flexCheckDefault13">Finance</label>
-											</div>
-											<span class="small">(184)</span>
-										</div>
-										<!-- Checkbox -->
-										<div class="d-flex justify-content-between align-items-center">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault14">
-												<label class="form-check-label" for="flexCheckDefault14">Legal</label>
-											</div>
-											<span class="small">(65)</span>
-										</div>
-										<!-- Checkbox -->
-										<div class="d-flex justify-content-between align-items-center">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault15">
-												<label class="form-check-label" for="flexCheckDefault15">Photography</label>
-											</div>
-											<span class="small">(99)</span>
 										</div>
 										
+										
+										<!-- Checkbox -->
+								
+										<!-- Checkbox -->
+									
+										<!-- Checkbox -->
+									
+										<!-- Checkbox -->
+						
 										<!-- Collapse body -->
-										<div class="collapse multi-collapse" id="multiCollapseExample1">
-											<div class="card card-body p-0">
-												<!-- Checkbox -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="form-check">
-														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault16">
-														<label class="form-check-label" for="flexCheckDefault16">Writing</label>
-													</div>
-													<span class="small">(178)</span>
-												</div>
-												<!-- Checkbox -->
-												<div class="d-flex justify-content-between align-items-center">
-													<div class="form-check">
-														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault18">
-														<label class="form-check-label" for="flexCheckDefault18">Marketing</label>
-													</div>
-													<span class="small">(104)</span>
-												</div>
-											</div>
-										</div>
+									
 										<!-- Collapse button -->
-										<a class=" p-0 mb-0 mt-2 btn-more d-flex align-items-center" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+									<!--	<a class=" p-0 mb-0 mt-2 btn-more d-flex align-items-center" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
 											See <span class="see-more ms-1">more</span><span class="see-less ms-1">less</span><i class="fas fa-angle-down ms-2"></i>
-										</a>
+										</a> -->
 									</div>
 								</div>
 								<!-- Category END -->
@@ -311,13 +252,14 @@ Page content START -->
 									</ul>
 								</div>
 								<!-- Language END -->
+          <div class="d-grid p-2 p-lg-0 text-center">
+						<button class="btn btn-primary mb-0" type="submit">Filter Results</button>
+					</div>
 						</form><!-- Form End -->
 					</div>
 
 					<!-- Button -->
-					<div class="d-grid p-2 p-lg-0 text-center">
-						<button class="btn btn-primary mb-0">Filter Results</button>
-					</div>
+				
 
 				</div>
 			</nav>
@@ -471,8 +413,23 @@ export default {
             this.loading = false
         })
 
+      },
+
+
+      AdvancedFilter(){
+        const getCategory = document.forms["filter"]["category"].value;
+
+        const data = {
+        category:getCategory
       }
 
+      axios
+      .post("courses/advanced-filter",data)
+      .then(response => {
+        console.log(response.data)
+      })
+      }
+   
 
       
       

@@ -1,5 +1,5 @@
 <template>
-     <nav class="navbar nav-bar navbar-expand-md navbar-light  fixed-top">
+     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
        <div class="container">
            <router-link to="/" class="navbar-brand">iLMS</router-link>
                <button class="navbar-toggler" 
