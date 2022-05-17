@@ -12,7 +12,7 @@
 														</div>
 														<!-- Title -->
 														<h6 class="mb-0 ms-2">	
-															<a href="#">{{item.course.title}}</a>
+															<router-link :to="{name:'Course', params: {slug : item.course.slug}}" >{{item.course.title}}</router-link>
 														</h6>
 													</div>
 												</td>
