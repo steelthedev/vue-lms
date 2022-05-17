@@ -15,7 +15,7 @@
 				<!-- info -->
 				<p class="mb-4">Either something went wrong or this page doesn't exist anymore.</p>
 				<!-- Button -->
-				<a href="index.html" class="btn btn-primary mb-0">Take me to Homepage</a>
+				<router-link :to="{name:'Home'}" class="btn btn-primary mb-0">Take me to Homepage</router-link>
 			</div>
 		</div>
 	</div>
