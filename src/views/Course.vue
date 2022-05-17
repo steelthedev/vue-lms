@@ -188,9 +188,9 @@ Page content START -->
 												<!-- Course lecture -->
 												<div class="d-flex justify-content-between align-items-center">
 													<div class="position-relative d-flex align-items-center">
-														<a href="#" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
+														<a :href="lesson.get_video" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
 															<i class="fas fa-play me-0"></i>
-                              <video :src="lesson.get_video">
+                              <video :src="lesson.get_video" controls>
 														</a>
 														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Introduction</span>
 													</div>
@@ -811,7 +811,6 @@ export default {
         return{
             course: {},
             lessons :[],
-            
             instructor:{},
             comments:[],
             activeLesson:null,
@@ -5405,6 +5404,11 @@ textarea.form-control-lg {
 }
 .dropstart .dropdown-toggle-split::before {
   margin-right: 0;
+}
+
+video{
+  height:100%;
+  width:100%;
 }
 
 .btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
