@@ -190,9 +190,9 @@ Page content START -->
 													<div class="position-relative d-flex align-items-center">
 														<a :href="lesson.get_video" class="btn btn-danger-soft btn-round btn-sm mb-0 stretched-link position-static">
 															<i class="fas fa-play me-0"></i>
-                              <video :src="lesson.get_video" controls></video>
+                              
 														</a>
-														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Introduction</span>
+														<span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px w-md-400px">Introduction <video width="100%" :src="lesson.get_video" controls></video></span>
 													</div>
 													<p class="mb-0">2m 10s</p>
 												</div>
