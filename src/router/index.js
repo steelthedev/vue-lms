@@ -133,7 +133,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requireLogin) && !store.state.isAuthenticated) {
-    next({ name: 'LogIn', query: { to: to.path } });
+    next({ name: 'Login', query: { to: to.path } });
   } else {
     next()
   }
