@@ -80,25 +80,37 @@ const routes = [
   {
     path: '/myaccount',
     name: 'Myaccount',
-    component:Myaccount
+    component:Myaccount,
+    meta: {
+      requireLogin: true
+  }
   },
 
   {
     path: '/manage-course',
     name: 'ManageCourse',
-    component:ManageCourse
+    component:ManageCourse,
+    meta: {
+      requireLogin: true
+  }
   },
 
   {
     path: '/edit-profile',
     name: 'EditProfile',
-    component:EditProfile
+    component:EditProfile,
+    meta: {
+      requireLogin: true
+  }
   },
 
   {
     path: '/instructor/addcourse',
     name: 'Addcourse',
-    component:Addcourse
+    component:Addcourse,
+    meta: {
+      requireLogin: true
+    }
   },
 
   
