@@ -178,12 +178,12 @@ Page content START -->
 									<!-- Item -->
 									<div class="accordion-item mb-3" v-for="lesson in lessons" :key="lesson">
 										<h6 class="accordion-header font-base" id="heading-1">
-											<button class="accordion-button fw-bold rounded d-sm-flex d-inline-block collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+											<button class="accordion-button fw-bold rounded d-sm-flex d-inline-block collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls ="collapse-1" >
 												{{lesson.title}}
-												<span class="small ms-0 ms-sm-2">(3 Lectures)</span> 
+									
 											</button>
 										</h6>
-										<div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#accordionExample2">
+										<div id="collapse 1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#accordionExample2">
 											<div class="accordion-body mt-3">
 												<!-- Course lecture -->
 												<div class="d-flex justify-content-between align-items-center">
@@ -717,68 +717,6 @@ Page content START -->
 							</ul>
 						</div>
 						<!-- Course info END -->
-					</div>
-
-					<div class="col-md-6 col-lg-12">
-						<!-- Recently Viewed START -->
-						<div class="card card-body shadow p-4 mb-4">
-							<!-- Title -->
-							<h4 class="mb-3">Recently Viewed</h4>
-							<!-- Course item START -->
-							<div class="row gx-3 mb-3">
-								<!-- Image -->
-								<div class="col-4">
-									<img class="rounded" src="../assets/images/courses/4by3/21.jpg" alt="">
-								</div>
-								<!-- Info -->
-								<div class="col-8">
-									<h6 class="mb-0"><a href="#">Fundamentals of Business Analysis</a></h6>
-									<ul class="list-group list-group-borderless mt-1 d-flex justify-content-between">
-										<li class="list-group-item px-0 d-flex justify-content-between">
-											<span class="text-success">$130</span>
-											<span class="h6 fw-light">4.5<i class="fas fa-star text-warning ms-1"></i></span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- Course item END -->
-
-							<!-- Course item START -->
-							<div class="row gx-3">
-								<!-- Image -->
-								<div class="col-4">
-									<img class="rounded" src="../assets/images/courses/4by3/18.jpg" alt="">
-								</div>
-								<!-- Info -->
-								<div class="col-8">
-									<h6 class="mb-0"><a href="#">The Complete Video Production Bootcamp</a></h6>
-									<ul class="list-group list-group-borderless mt-1 d-flex justify-content-between">
-										<li class="list-group-item px-0 d-flex justify-content-between">
-											<span class="text-success">$150</span>
-											<span class="h6 fw-light">4.0<i class="fas fa-star text-warning ms-1"></i></span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- Course item END -->
-						</div>
-						<!-- Recently Viewed END -->
-
-						<!-- Tags START -->
-						<div class="card card-body shadow p-4">
-							<h4 class="mb-3">Popular Tags</h4>
-							<ul class="list-inline mb-0">
-								<li class="list-inline-item"> <a class="btn btn-outline-light btn-sm" href="#">blog</a> </li>
-								<li class="list-inline-item"> <a class="btn btn-outline-light btn-sm" href="#">business</a> </li>
-								<li class="list-inline-item"> <a class="btn btn-outline-light btn-sm" href="#">theme</a> </li>
-								<li class="list-inline-item"> <a class="btn btn-outline-light btn-sm" href="#">bootstrap</a> </li>
-								<li class="list-inline-item"> <a class="btn btn-outline-light btn-sm" href="#">data science</a> </li>
-								<li class="list-inline-item"> <a class="btn btn-outline-light btn-sm" href="#">web development</a> </li>
-								<li class="list-inline-item"> <a class="btn btn-outline-light btn-sm" href="#">tips</a> </li>
-								<li class="list-inline-item"> <a class="btn btn-outline-light btn-sm" href="#">machine learning</a> </li>
-							</ul>
-						</div>	
-						<!-- Tags END -->
 					</div>
 				</div><!-- Row End -->
 			</div>

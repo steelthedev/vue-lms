@@ -163,7 +163,7 @@ Featured course START -->
 						<h6 class="card-title"><router-link :to="{name:'Course', params: {slug : course.slug}}">{{course.title}}</router-link></h6>
 						<!-- Badge and Price -->
 						<div class="d-flex justify-content-between align-items-center mb-0">
-							<div><a href="#" class="badge bg-info bg-opacity-10 text-info me-2"><i class="fas fa-circle small fw-bold"></i> Personal Development </a></div>
+							<div><a href="#" class="badge bg-info bg-opacity-10 text-info me-2"><i class="fas fa-circle small fw-bold"></i> {{course.categories.id}}</a></div>
 							<!-- Price -->
 							<h5 class="text-success mb-0">#{{course.price}}</h5>
 						</div>
@@ -176,7 +176,7 @@ Featured course START -->
 		</div>
 		<!-- Button -->
 		<div class="text-center mt-5">
-			<a href="#" class="btn btn-primary-soft">View more<i class="fas fa-sync ms-2"></i></a>
+			<router-link :to="{name:'Courses'}" class="btn btn-primary-soft">View more<i class="fas fa-sync ms-2"></i></router-link>
 		</div>
 	</div>
 </section>
